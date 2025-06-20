@@ -1,0 +1,19 @@
+{
+	"name": "jcink-amf-codemirror",
+	"private": true,
+	"scripts": {
+		"build": "bun run build-regular && bun run build-minified",
+		"build-regular": "bun build ./src/mod.js --outdir dist --format iife",
+		"build-minified": "bun build ./src/mod.js --outdir dist --format iife --minify --entry-naming [dir]/[name].min.[ext]"
+	},
+	"devDependencies": {
+		"@types/bun": "latest"
+	},
+	"dependencies": {
+		"@codemirror/lang-css": "^6.3.1",
+		"@codemirror/lang-html": "^6.4.9",
+		"@codemirror/lang-javascript": "^6.2.4",
+		"@codemirror/view": "^6.37.2",
+		"codemirror": "^6.0.2"
+	}
+}
